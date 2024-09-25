@@ -10,7 +10,7 @@ export default function RecurrenceOptions() {
   const options = ['daily', 'weekly', 'monthly', 'yearly'];
 
   return (
-    <div className="flex space-x-4 items-center justify-center">
+    <div className="flex space-x-4 items-center flex-wrap justify-center">
       {options.map(option => (
         <button
           key={option}
