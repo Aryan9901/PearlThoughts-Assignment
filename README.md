@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Reusable Date Picker Component
 
-## Getting Started
+## OVERVIEW
 
-First, run the development server:
+This documentation outlines the implementation of a reusable date picker component in React, designed to allow users to select recurring dates. The component mimics functionality, enabling various customization options for recurring dates, visual previews, and flexible date ranges.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technical Requirements
+- **Framework:** Next.js
+- **Styling:** TailwindCSS, Shadcn UI
+- **State Management:** Redux Toolkit
+- **Development Environment:** Project Idx
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Functionality
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The date picker component will feature the following functionalities:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Recurring Options:** Users can select from different recurring patterns:
 
-## Learn More
+🔹 Daily 🔹 Weekly 🔹 Monthly 🔹 Yearly
 
-To learn more about Next.js, take a look at the following resources:
+- **Customization Options:** Users can fine-tune the recurrence:
+> Select every X days/weeks/months/years.
+> Choose specific days of the week.
+> Specify the nth day of the month (e.g., the second Tuesday).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Visual Preview:** The component will display selected recurring dates on a mini calendar.
+Date Range: Users can set a start date and (optional) end date for the recurrence.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Testing
 
-## Deploy on Vercel
+Testing is a crucial part of development to ensure the reliability of the component. The following tests will be implemented:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Unit Tests:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Write unit tests for individual components (e.g., testing that the RecurrenceOptions component correctly dispatches actions).
+
+Use Jest and React Testing Library for testing.
+
+### Integration Tests:
+
+Include at least one integration test to ensure all components work together as expected (e.g., testing that selecting a recurrence option updates the preview calendar).
