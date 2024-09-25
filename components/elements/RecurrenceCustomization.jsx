@@ -9,7 +9,7 @@ export default function RecurrenceCustomization() {
   const recurrence = useSelector((state) => state.recurrence.recurrence);
 
   return (
-    <div className="flex items-center space-x-4">
+    <div className="flex items-center justify-center space-x-4">
       {recurrence !== 'daily' && (
         <>
           <label>Every</label>
@@ -17,10 +17,10 @@ export default function RecurrenceCustomization() {
             type="number"
             value={interval}
             onChange={(e) => dispatch(setInterval(Number(e.target.value)))}
-            className="border px-2 py-1"
+            className="border px-3 rounded-md py-1"
             min={1} // To ensure positive interval
           />
-          <span>{recurrence}</span>
+          <span>{recurrence.split('ly')[0]}</span>
         </>
       )}
     </div>
